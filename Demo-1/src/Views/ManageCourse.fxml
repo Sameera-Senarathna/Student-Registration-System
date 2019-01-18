@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="469.0" prefWidth="580.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.ManageManageCourseController">
+   <children>
+      <TextField fx:id="txtID" layoutX="159.0" layoutY="54.0" prefHeight="28.0" prefWidth="407.0" />
+      <TextField fx:id="txtName" layoutX="159.0" layoutY="93.0" prefHeight="28.0" prefWidth="407.0" />
+      <TextField fx:id="txtDuration" layoutX="159.0" layoutY="200.0" prefHeight="28.0" prefWidth="106.0" />
+      <TextArea fx:id="txtDescription" layoutX="159.0" layoutY="137.0" prefHeight="50.0" prefWidth="407.0" />
+      <Label layoutX="77.0" layoutY="59.0" text="Course ID :" />
+      <Label layoutX="71.0" layoutY="124.0" />
+      <Label layoutX="69.0" layoutY="137.0" text="Description :" />
+      <Label layoutX="84.0" layoutY="205.0" text="Duration :" />
+      <Label layoutX="56.0" layoutY="98.0" text="Course Name :" />
+      <Button fx:id="btnSave" layoutX="426.0" layoutY="200.0" mnemonicParsing="false" onAction="#ClickSaveBtn" prefHeight="28.0" prefWidth="58.0" text="Save" />
+      <Button fx:id="btnDelete" layoutX="506.0" layoutY="200.0" mnemonicParsing="false" onAction="#ClickDeleteBtn" text="Delete" />
+      <Button layoutX="505.0" layoutY="14.0" mnemonicParsing="false" onAction="#ClickHomeBtn" prefHeight="28.0" prefWidth="61.0" text="Home" />
+      <TableView fx:id="tblCourse" layoutX="21.0" layoutY="255.0" prefHeight="200.0" prefWidth="546.0">
+        <columns>
+          <TableColumn prefWidth="85.0" text="Course ID" />
+          <TableColumn prefWidth="126.0" text="Name" />
+            <TableColumn prefWidth="262.0" text="Description" />
+            <TableColumn prefWidth="71.0" text="Duration" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+   </children>
+</AnchorPane>
